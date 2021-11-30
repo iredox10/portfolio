@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #310931;
+  color: white;
+}
+
+.head {
+  box-shadow: 0px 1px 6px 1px rgba(166, 78, 166, 0.5);
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: #310931;
+}
+.head nav ul {
+  display: flex;
+  list-style: none;
+}
+.head nav ul li {
+  margin-inline: 0.5rem;
+}
+
+.head-info {
+  max-width: 80%;
+  margin-inline: auto;
+  margin-top: 5rem;
+}
+.head-info .info {
+  padding-right: 20rem;
+  text-transform: uppercase;
+}
+.head-info .info h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+.head-info .info h1 span {
+  display: block;
+}
+
+.about-me {
+  max-width: 80%;
+  margin-inline: auto;
+}
+.about-me h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  position: relative;
+}
+.about-me h1::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 0.2rem;
+  background: #fff;
+  bottom: 1rem;
+  margin-left: 0.5rem;
+  transition: all 0.5s ease;
+}
+.about-me h1:hover::after {
+  left: 0;
+  bottom: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
