@@ -204,10 +204,10 @@ body {
   margin: 0.5rem 0;
 }
 
-.works {
+.projects {
   padding: 1rem;
 }
-.works .title {
+.projects .title {
   text-transform: uppercase;
   font-size: 2rem;
   position: relative;
@@ -215,7 +215,7 @@ body {
   opacity: 0.8;
   color: rgba(255, 166, 0, 0.8);
 }
-.works .title::after {
+.projects .title::after {
   content: "";
   position: absolute;
   width: 40%;
@@ -238,6 +238,10 @@ body {
 .email-contact form {
   display: flex;
   flex-direction: column;
+  background: rgba(243, 158, 0, 0.1);
+  filter: blur(4);
+  padding: 2rem;
+  border-radius: 0.5rem;
 }
 .email-contact form .input {
   margin: 0.5rem 0;
@@ -248,8 +252,8 @@ body {
   display: inline-block;
 }
 .email-contact form .input input, .email-contact form .input textarea, .email-contact form .input button {
-  width: 100%;
   border: none;
+  width: 100%;
   padding: 0.5rem;
   font-size: 1.2rem;
   border-radius: 0.2rem;
@@ -371,6 +375,7 @@ body {
   .email-contact form .first-input {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
   }
 }
 

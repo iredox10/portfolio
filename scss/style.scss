@@ -213,7 +213,7 @@ body{
     }
 }
 
-.works{
+.projects{
     padding: 1rem;
     .title{
         @include heading()
@@ -231,6 +231,10 @@ body{
     form{
         display: flex;
         flex-direction: column;
+        background: rgb(243, 158, 0, .1);
+        filter: blur(4);
+        padding: 2rem;
+        border-radius: .5rem;
         .input{
             margin: .5rem 0;
             label{
@@ -239,8 +243,8 @@ body{
                 display: inline-block;
             }
             input,textarea,button{
-                width: 100%;
                 border: none;
+                width: 100%;
                 padding: .5rem;
                 font-size: 1.2rem;
                 border-radius: .2rem;
@@ -367,6 +371,7 @@ body{
             .first-input{
                 display: flex;
                 justify-content: space-between;
+                gap: 1rem;
             }
         }
     }
