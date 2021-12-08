@@ -326,6 +326,36 @@ body{
             font-size: 1.2rem;
         }
     }
+    .social-media{
+        position: fixed;
+        top: 70%;
+        transform: rotate(90deg);
+        .links{
+            position: relative;
+            a{
+                text-decoration: none;
+                transition: .3s ease;
+                display: inline-block;
+                &:hover  i{
+                    color: $secondary-color;
+                }
+                i{
+                    color: $text-color;
+                    font-size: 1.3rem;
+                }
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                transform: rotate(90deg);
+                height: 4rem;
+                width: .2rem;
+                background: $text-color;
+                right: -3rem;
+                top: -1.3rem;
+            }
+        }
+    }
     .projects{
         width: 90%;
         margin-inline: auto;

@@ -328,6 +328,37 @@ body {
     font-size: 1.2rem;
   }
 
+  .social-media {
+    position: fixed;
+    top: 70%;
+    transform: rotate(90deg);
+  }
+  .social-media .links {
+    position: relative;
+  }
+  .social-media .links a {
+    text-decoration: none;
+    transition: 0.3s ease;
+    display: inline-block;
+  }
+  .social-media .links a:hover i {
+    color: #f39e00;
+  }
+  .social-media .links a i {
+    color: #b3b3b3;
+    font-size: 1.3rem;
+  }
+  .social-media .links::after {
+    content: "";
+    position: absolute;
+    transform: rotate(90deg);
+    height: 4rem;
+    width: 0.2rem;
+    background: #b3b3b3;
+    right: -3rem;
+    top: -1.3rem;
+  }
+
   .projects {
     width: 90%;
     margin-inline: auto;
