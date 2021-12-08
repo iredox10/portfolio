@@ -328,6 +328,11 @@ body {
     font-size: 1.2rem;
   }
 
+  .projects {
+    width: 90%;
+    margin-inline: auto;
+  }
+
   .email-contact {
     width: 50%;
     margin-inline: auto;
