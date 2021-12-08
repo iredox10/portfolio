@@ -4,67 +4,338 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "mplus";
+  src: url("../fonts/MPLUS1Code-VariableFont_wght.ttf");
+}
 body {
-  background: #310931;
-  color: white;
+  background: #1b061b;
+  color: #b3b3b3;
+  font-family: "Rubik";
+  overflow-x: hidden;
 }
 
 .head {
-  box-shadow: 0px 1px 6px 1px rgba(166, 78, 166, 0.5);
   display: flex;
-  padding: 1rem;
+  padding: 2rem 1rem;
   justify-content: space-between;
   position: sticky;
   top: 0;
-  background: #310931;
+  background: rgba(27, 6, 27, 0.6);
+  z-index: 1;
 }
 .head nav ul {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "mplus";
   list-style: none;
+  position: absolute;
+  width: 60vw;
+  height: 70vh;
+  background: rgba(243, 158, 0, 0.8);
+  right: 0;
+  top: 5rem;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(100vw);
+  z-index: 4;
 }
 .head nav ul li {
   margin-inline: 0.5rem;
+  padding: 1rem;
+}
+.head nav ul li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #1b061b;
+  font-size: 1.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.head nav ul li a:hover {
+  color: #b3b3b3;
+}
+.head .toggle-nav {
+  transform: translateX(0);
+}
+.head .menu {
+  width: 3rem;
+  height: 2rem;
+  cursor: pointer;
+}
+.head .menu .hamburger {
+  width: 100%;
+  height: 0.3rem;
+  background: orange;
+  border-radius: 5rem;
+  position: relative;
+  transition: 0.3s ease;
+}
+.head .menu .hamburger::before {
+  content: "";
+  position: absolute;
+  height: inherit;
+  width: 80%;
+  background: orange;
+  transform: translateY(0.7rem);
+  right: 0;
+  border-radius: inherit;
+  transition: 0.3s ease;
+}
+.head .menu .hamburger::after {
+  content: "";
+  position: absolute;
+  height: inherit;
+  width: 60%;
+  background: orange;
+  transform: translateY(1.3rem);
+  right: 0;
+  border-radius: inherit;
+  transition: 0.3s ease;
+}
+.head .menu.open .hamburger {
+  background-color: transparent;
+}
+.head .menu.open .hamburger::after {
+  transform: rotate(45deg);
+  width: 60%;
+}
+.head .menu.open .hamburger::before {
+  transform: rotate(-45deg);
+  width: 60%;
 }
 
 .head-info {
-  max-width: 80%;
-  margin-inline: auto;
-  margin-top: 5rem;
+  padding: 1rem;
+  margin: 4rem 0;
+}
+.head-info h2 {
+  text-align: start;
+  color: #f39e00;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "mplus";
 }
 .head-info .info {
-  padding-right: 20rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .head-info .info h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
+  font-size: 2rem;
+  font-weight: 900;
 }
 .head-info .info h1 span {
   display: block;
+  opacity: 0.7;
+}
+.head-info .info .desc {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+.head-info .info .contact-btn {
+  padding: 0.6rem 2rem;
+  font-size: 1.5rem;
+  background: transparent;
+  border: 1px solid #f39e00;
+  color: #b3b3b3;
+  border-radius: 0.2rem;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  margin: 1rem 0;
+  display: inline-block;
+}
+.head-info .info .contact-btn:hover {
+  background: rgba(243, 158, 0, 0.3);
 }
 
 .about-me {
-  max-width: 80%;
-  margin-inline: auto;
+  padding: 1rem;
 }
 .about-me h1 {
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2rem;
   position: relative;
+  margin: 1rem 0;
+  opacity: 0.8;
+  color: rgba(255, 166, 0, 0.8);
 }
 .about-me h1::after {
   content: "";
   position: absolute;
-  width: 20%;
-  height: 0.2rem;
-  background: #fff;
-  bottom: 1rem;
+  width: 40%;
+  height: 0.1rem;
+  background: rgba(255, 166, 0, 0.8);
+  bottom: 0.5rem;
   margin-left: 0.5rem;
   transition: all 0.5s ease;
 }
-.about-me h1:hover::after {
-  left: 0;
-  bottom: 0;
+.about-me .desc {
+  margin: 0.5rem 0;
+  text-transform: capitalize;
+}
+.about-me .desc p {
+  margin: 0.5rem 0;
+  line-height: 1.3rem;
+}
+.about-me .tech {
+  margin: 1rem 0;
+}
+.about-me .tech h2 {
+  color: rgba(255, 166, 0, 0.6);
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+.about-me .tech .tech-list {
+  margin-bottom: 0.5rem;
+}
+.about-me .tech .list {
+  display: flex;
+  gap: 5rem;
+}
+.about-me .tech .list ul {
+  list-style-type: none;
+}
+.about-me .tech .list ul li {
+  margin: 0.5rem 0;
+}
+
+.works {
+  padding: 1rem;
+}
+.works .title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  position: relative;
+  margin: 1rem 0;
+  opacity: 0.8;
+  color: rgba(255, 166, 0, 0.8);
+}
+.works .title::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 0.1rem;
+  background: rgba(255, 166, 0, 0.8);
+  bottom: 0.5rem;
+  margin-left: 0.5rem;
+  transition: all 0.5s ease;
+}
+
+.email-contact {
+  margin: 2rem 0;
+  padding: 1rem;
+  text-transform: capitalize;
+}
+.email-contact .title {
+  text-align: center;
+  margin: 1rem 0;
+}
+.email-contact form {
+  display: flex;
+  flex-direction: column;
+}
+.email-contact form .input {
+  margin: 0.5rem 0;
+}
+.email-contact form .input label {
+  color: orange;
+  margin: 0.3rem 0;
+  display: inline-block;
+}
+.email-contact form .input input, .email-contact form .input textarea, .email-contact form .input button {
+  width: 100%;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+  text-transform: capitalize;
+}
+.email-contact form .input textarea {
+  font-family: rubik;
+}
+.email-contact form button {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.3rem;
+  background: rgba(255, 166, 0, 0.8);
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+.email-contact form button:hover {
+  color: #b3b3b3;
+}
+
+.footer {
+  padding: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@media (min-width: 800px) {
+  body {
+    overflow-x: initial;
+  }
+
+  .head .menu {
+    display: none;
+  }
+  .head nav ul {
+    transform: translateX(-13vw);
+    position: initial;
+    width: 0;
+    flex-direction: row;
+    height: initial;
+    gap: 1rem;
+    background: white;
+  }
+  .head nav ul li {
+    padding: 0;
+    margin-inline: 0;
+  }
+  .head nav ul li a {
+    color: #b3b3b3;
+    font-size: 1.3rem;
+  }
+  .head nav ul li a:hover {
+    color: #f39e00;
+  }
+
+  .head-info {
+    height: 60vh;
+    width: 90%;
+    margin: 5rem auto;
+  }
+  .head-info .info h1 {
+    font-size: 3.5rem;
+  }
+  .head-info .info p {
+    padding-right: 35rem;
+  }
+
+  .about-me {
+    width: 90%;
+    margin-inline: auto;
+    padding-right: 20rem;
+  }
+  .about-me p {
+    font-size: 1.2rem;
+  }
+
+  .email-contact {
+    width: 50%;
+    margin-inline: auto;
+  }
+  .email-contact form .first-input {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

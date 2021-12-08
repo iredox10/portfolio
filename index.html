@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
+    <!-- <link rel="stylesheet" href="./style/style.css"> -->
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./script.js" defer></script>
     <title>edidev </title>
 </head>
 <body>
 
     <header class="head">
         <div class="logo">
-            <img src="" alt="logo">
+            <h1>edi<span>dev</span></h1>
         </div>
         <nav>
-            <ul>
-                <li><a href="">about</a></li>
-                <li><a href="">skills</a></li>
-                <li><a href="">contact</a></li>
-                <li><a href="">resume</a></li>
+            <ul class='nav'>
+                <li><a href="#about">about</a></li>
+                <li><a href="#about">skills</a></li>
+                <li><a href="#about">projects</a></li>
+                <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
+        <div class="menu">
+            <div class="hamburger"></div>
+        </div>
     </header>
 
     <section class="head-info">
@@ -29,36 +33,77 @@
         <div class="info">
             <h1><span>idris adam idris</span> i write code for the web</h1>
             <p class="desc">i am a web developer. writing code for both the front-end and back-end. and sometimes do graphics design</p>
-            <button>contact me</button>
+            <a href='/' class="contact-btn">contact me</a>
         </div>
     </section>
     <section class="social-media">
+
     </section>
     
-    <section class="about-me">
+    <section class="about-me" id="about">
         <h1>about me</h1>
+        <div class="desc">
         <p>hello my name is idris adam idris. i love developing and making things for the web. especially working with javascript and HTML and css</p>
-        <p>i live in kano state, a city located in the norther region of Nigeria</p>
-        <p>i have design and developed web app and website for my own self</p>
+        <p>started developing websites back in 2019, designing user-interface only with HTML and CSS </p>
+        <p>i found it so interested and entertainig. then i move learning javascript and node.js</p>
+        <p>right now i developed web apps with node.js for the server side and HTML, CSS for the client side </p>
+        <p>i live in kano state, a city located in the northern region of Nigeria</p>
+    </div>
         <div class="tech">
-        <p>here are list of the technology i love working with</p>
+        <h2 class="tech-list">here are list of the technology i love working with</h2 class="tech-list">
         <div class="list">
             <ul>
-                <li>HTML</li>
-                <li>Css</li>
-                <li>Javascript</li>
+                <li>HTML 5</li>
+                <li>Css 3</li>
+                <li>Javascript (Es6+)</li>
+                <li>tailwind</li>
             </ul>
             <ul>
                 <li>node</li>
-                <li>tailwind</li>
                 <li>express</li>
+                <li>boostrap</li>
             </ul>
         </div>
     </div>  
     </section>
 
-    <section class="works">
-        <h1>things i've have build</h1>
+    <section class="projects" id="projects">
+        <h1 class="title">my work</h1>
+        <div class="cards">
+            <div class="card">
+            <div class="project-img">
+
+            </div>
+            <div class="project-desc">
+                <h1>name of project</h1>
+                <p >project description</p>
+            </div>
+            </div>
+        </div>
     </section>
+    <div class="email-contact" id="contact">
+        <h1 class="title">send me a meassage</h1>
+        <form action="">
+            <div class="first-input">
+            <div class="input">
+                <label for="name">name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="input">
+                <label for="email">email</label>
+                <input type="email" name="email" id="email">
+            </div>
+        </div>
+            <div class="input">
+            <label for="msg">message</label>
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="type you messsage message..."></textarea>
+            </div>    
+            <button class="form-btn">send</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>created with love by Idris adam</p>
+    </footer>
 </body>
 </html>
