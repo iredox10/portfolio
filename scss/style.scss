@@ -218,6 +218,22 @@ body{
     .title{
         @include heading()
     }
+    .cards{
+        .card{
+            margin: 1rem 0;
+            text-transform: capitalize;
+            .project-img img{
+                width: 100%;
+            }
+            .project-desc{
+                background: rgba(243, 158, 0, .1);
+                padding: 1rem;
+            }
+            .last img{
+                height: 10%;
+            }
+        }
+    }
 }
 
 .email-contact{
@@ -328,6 +344,19 @@ body{
         padding-right: 20rem;
         p{
             font-size: 1.2rem;
+        }
+    }
+    .projects{
+        .cards{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            .last{
+                img{
+                    height: 50%;
+                }
+            }
         }
     }
     .social-media{

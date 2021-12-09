@@ -225,6 +225,20 @@ body {
   margin-left: 0.5rem;
   transition: all 0.5s ease;
 }
+.projects .cards .card {
+  margin: 1rem 0;
+  text-transform: capitalize;
+}
+.projects .cards .card .project-img img {
+  width: 100%;
+}
+.projects .cards .card .project-desc {
+  background: rgba(243, 158, 0, 0.1);
+  padding: 1rem;
+}
+.projects .cards .card .last img {
+  height: 10%;
+}
 
 .email-contact {
   margin: 2rem 0;
@@ -330,6 +344,16 @@ body {
   }
   .about-me p {
     font-size: 1.2rem;
+  }
+
+  .projects .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .projects .cards .last img {
+    height: 50%;
   }
 
   .social-media {
