@@ -133,6 +133,7 @@ body{
         transform: rotate(-45deg);
         width: 60%;
     }
+    
 }
 
 .head-info{
@@ -174,6 +175,23 @@ body{
         &:hover{
             background:rgba(243, 158, 0, .3) ;
         }
+        }
+    }
+
+    .links{
+        a{
+            text-decoration: none;
+            transition: .3s ease;
+            display: inline-block;
+            margin-right: 2rem;
+            transition: all .3s ease;
+            &:hover  i{
+                color: $secondary-color;
+            }
+            i{
+                color: $text-color;
+                font-size: 1.3rem;
+            }
         }
     }
 }
@@ -231,6 +249,26 @@ body{
             }
             .last img{
                 height: 10%;
+            }
+            .langs{
+                display: flex;
+                gap: 1rem;
+                span{
+                    background: $primary-color;
+                    padding: 0.5rem;
+                    margin: 1rem 0;
+                    border-radius: .5rem;
+                }
+            }
+            .link a i{
+                color: $secondary-color;
+                font-size: 1.3rem;
+                margin-right: 1rem;
+                transition: .4s ease-in-out;
+                &:hover{
+                    color: $primary-color;
+                    transform: scale(1.5);
+                }
             }
         }
     }
@@ -361,31 +399,25 @@ body{
     }
     .social-media{
         position: fixed;
-        top: 70%;
+        top: 60%;
         transform: rotate(90deg);
+        right: -4rem;
         .links{
             position: relative;
             a{
-                text-decoration: none;
-                transition: .3s ease;
-                display: inline-block;
-                &:hover  i{
-                    color: $secondary-color;
-                }
                 i{
-                    color: $text-color;
-                    font-size: 1.3rem;
+                    font-size: 1.6rem;;
                 }
             }
             &::after{
                 content: '';
                 position: absolute;
                 transform: rotate(90deg);
-                height: 4rem;
+                height: 10rem;
                 width: .2rem;
                 background: $text-color;
-                right: -3rem;
-                top: -1.3rem;
+                right: -4rem;
+                top: -4.3rem;
             }
         }
     }

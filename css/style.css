@@ -152,6 +152,20 @@ body {
 .head-info .info .contact-btn:hover {
   background: rgba(243, 158, 0, 0.3);
 }
+.head-info .links a {
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: inline-block;
+  margin-right: 2rem;
+  transition: all 0.3s ease;
+}
+.head-info .links a:hover i {
+  color: #f39e00;
+}
+.head-info .links a i {
+  color: #b3b3b3;
+  font-size: 1.3rem;
+}
 
 .about-me {
   padding: 1rem;
@@ -238,6 +252,26 @@ body {
 }
 .projects .cards .card .last img {
   height: 10%;
+}
+.projects .cards .card .langs {
+  display: flex;
+  gap: 1rem;
+}
+.projects .cards .card .langs span {
+  background: #1b061b;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+}
+.projects .cards .card .link a i {
+  color: #f39e00;
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  transition: 0.4s ease-in-out;
+}
+.projects .cards .card .link a i:hover {
+  color: #1b061b;
+  transform: scale(1.5);
 }
 
 .email-contact {
@@ -358,33 +392,25 @@ body {
 
   .social-media {
     position: fixed;
-    top: 70%;
+    top: 60%;
     transform: rotate(90deg);
+    right: -4rem;
   }
   .social-media .links {
     position: relative;
   }
-  .social-media .links a {
-    text-decoration: none;
-    transition: 0.3s ease;
-    display: inline-block;
-  }
-  .social-media .links a:hover i {
-    color: #f39e00;
-  }
   .social-media .links a i {
-    color: #b3b3b3;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
   .social-media .links::after {
     content: "";
     position: absolute;
     transform: rotate(90deg);
-    height: 4rem;
+    height: 10rem;
     width: 0.2rem;
     background: #b3b3b3;
-    right: -3rem;
-    top: -1.3rem;
+    right: -4rem;
+    top: -4.3rem;
   }
 
   .projects {
